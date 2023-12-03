@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+body{
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+form{
+    width: 25%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+}
+.input_group{
+    position: relative;
+}
+.input_group input{
+    position: relative;
+    width: 100%;
+    padding: 15px 10px;
+    border-radius: 5px;
+    border: 3px solid #eee;
+    outline: none;
+}
+.input_group input:focus ~ label,
+.input_group input:valid ~ label{
+    top: -11px;
+    font-size: 13px;
+}
+.input_group label{
+    position: absolute;
+    top:5px;
+    left: 8px;
+    text-transform: capitalize;
+    padding: 5px;
+    color: #aaa;
+    background-color: #fff;
+    pointer-events: none;
+    transition: .3s;
+}
+.input_group i{
+    position: absolute;
+    top: 12px;
+    color: #aaa;
+    right: 10px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+
+}
+.input_group i:hover,.input_group i.active{
+    background-color: #f3f3f3;
+}
+.strength{
+    --width:0;
+    --bg-color:transparent;
+    width: 100%;
+    height: 8px;
+    background-color: #eee;
+    margin: 10px 0;
+    border-radius: 2px;
+    position: relative;
+}
+.strength::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    background: var(--bg-color);
+    height: 100%;	
+    transition: all .3s ease;
+}
+
+p{
+    color: #aaa;
+    text-transform: capitalize;
+    font-size: 15px;
+}
